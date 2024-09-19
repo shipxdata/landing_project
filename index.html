@@ -517,15 +517,11 @@
 		}
 
 		function loadImages() {
-			console.log(window.innerWidth)
 			const triggerClass = getTriggerClass(window.innerWidth)
 			let   dataSrc, size
-			console.log(triggerClass)
-
+			
 			$(`img.${triggerClass}`).each((n, img) => {
-				console.log(img)
 				dataSrc = $(img).attr('data-src')
-				console.log(dataSrc)
 				if (dataSrc) {
 					$(img).attr('src', dataSrc)
 				}
